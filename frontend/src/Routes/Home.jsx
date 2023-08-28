@@ -1,4 +1,4 @@
-import { Box, Container, Flex, IconButton, useToast, Spinner } from '@chakra-ui/react';
+import { Box, Container, Flex, IconButton, useToast, Spinner, Text, Wrap, Badge } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import CustomInput from '../Components/CommonComponents/CustomInput';
 import { GrAdd } from 'react-icons/gr';
@@ -71,7 +71,20 @@ export default function Home() {
 
 
       <Container mt="5">
-      
+
+        {/* display total number of tasks */}
+        <Wrap mb="5" display={"flex"} justifyContent={"space-around"} w="full" >
+
+          {/* total tasks */}
+          <Badge bg="brand.100" color="white" p="1" px="2"  >  Total Tasks - {allTasks.length} </Badge>
+
+          {/* total pending tasks */}
+          <Badge bg="brand.100" color="white" p="1" px="2"  >  Pending Tasks - {allTasks.filter(task => task.status === false).length} </Badge>
+
+          {/* completed tasks */}
+          <Badge bg="brand.100" color="white" p="1" px="2"  >  Completed Tasks - {allTasks.filter(task => task.status === true).length} </Badge>
+        </Wrap>
+
         {/* display spinner if processing else ma[p tasks] */}
         {getAllTasksProcessing ? (
           <Flex align="center" justify="center" minH="50vh">

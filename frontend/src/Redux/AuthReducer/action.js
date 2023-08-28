@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as types from "./actionTypes";
 
-const END_POINT = "http://localhost:8080"
+const END_POINT = "https://todo-6odt.onrender.com"
 
 
 // signup function
