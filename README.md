@@ -4,7 +4,16 @@
 https://lighthearted-fox-2d89be.netlify.app/
 
 ## Introduction
+Welcome to our super simple TODO app! Here, you can easily sign up and log in. Once you're in, you can create tasks, update them if things change, and even delete tasks when you're done. I make sure everything is easy to use, Let's get organized and productive together!
 
+## Features
+- Signup and Login
+- Create Task
+- Update Task
+- Delete Task
+- Display all tasks
+
+  
 ## Tech Stack
 - React js
 - Node js
